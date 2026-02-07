@@ -8,6 +8,8 @@ int main() {
     float area1;
     float pib1;
     int pontos_turisticos1;
+    float densidade_populacional1;
+    float pib_per_capita1;
     
     char estado2;
     char codigo2[4];
@@ -16,9 +18,12 @@ int main() {
     float area2;
     float pib2;
     int pontos_turisticos2;
+    float densidade_populacional2;
+    float pib_per_capita2;
     
     printf("========================================\n");
     printf("  SUPER TRUNFO - CADASTRO DE CARTAS\n");
+    printf("      Nível Aventureiro\n");
     printf("========================================\n\n");
     
     printf("--- CADASTRO DA CARTA 1 ---\n\n");
@@ -43,6 +48,9 @@ int main() {
     
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontos_turisticos1);
+    
+    densidade_populacional1 = populacao1 / area1;
+    pib_per_capita1 = (pib1 * 1000000000) / populacao1; 
     
     printf("\n");
     
@@ -69,6 +77,9 @@ int main() {
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontos_turisticos2);
     
+    densidade_populacional2 = populacao2 / area2;
+    pib_per_capita2 = (pib2 * 1000000000) / populacao2;  
+    
     printf("\n");
     
     printf("========================================\n");
@@ -83,6 +94,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional1);
+    printf("PIB per Capita: %.2f reais\n", pib_per_capita1);
     
     printf("\n");
     
@@ -94,6 +107,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional2);
+    printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
     
     printf("\n========================================\n");
     printf("Cadastro concluído com sucesso!\n");
